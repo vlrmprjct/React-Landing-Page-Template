@@ -70,14 +70,14 @@ export default (env) => {
                     test: /\.(png|jpe?g|gif|jp2|webp)$/,
                     type: 'asset/resource',
                     generator: {
-                        filename: 'assets/[name][ext]'
+                        filename: 'assets/img/[name][ext]'
                     }
                 },
                 {
                     test: /\.(woff(2)?|eot|ttf|otf)(\?v=\d+\.\d+\.\d+)?$/,
                     type: 'asset/resource',
                     generator: {
-                        filename: 'fonts/[name][ext]'
+                        filename: 'assets/fonts/[name][ext]'
                     }
                 }
             ],
