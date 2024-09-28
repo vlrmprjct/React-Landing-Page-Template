@@ -1,14 +1,8 @@
 import React, { createElement } from 'react';
 import { createRoot } from 'react-dom/client';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fas } from '@fortawesome/free-solid-svg-icons';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import { far } from '@fortawesome/free-regular-svg-icons';
 import App from './App';
 // import * as serviceWorker from './serviceWorker';
 import './index.css';
-
-library.add(fab, fas, far);
 
 const root = document.getElementById('root');
 
