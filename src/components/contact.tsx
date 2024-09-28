@@ -1,6 +1,7 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const initialState = {
   name: "",
@@ -103,7 +104,7 @@ export const Contact = (props) => {
               <h3>Contact Info</h3>
               <p>
                 <span>
-                  <i className="fa fa-map-marker"></i> Address
+                <FontAwesomeIcon icon={['fas', 'map-marker']} className="fa" /> Address
                 </span>
                 {props.data ? props.data.address : "loading"}
               </p>
@@ -111,7 +112,7 @@ export const Contact = (props) => {
             <div className="contact-item">
               <p>
                 <span>
-                  <i className="fa fa-phone"></i> Phone
+                <FontAwesomeIcon icon={['fas', 'phone']} className="fa" /> Phone
                 </span>{" "}
                 {props.data ? props.data.phone : "loading"}
               </p>
@@ -119,7 +120,7 @@ export const Contact = (props) => {
             <div className="contact-item">
               <p>
                 <span>
-                  <i className="fa fa-envelope-o"></i> Email
+                <FontAwesomeIcon icon={['fas', 'envelope']} className="fa" /> Email
                 </span>{" "}
                 {props.data ? props.data.email : "loading"}
               </p>
@@ -132,16 +133,18 @@ export const Contact = (props) => {
                   <li>
                     <a href={props.data ? props.data.facebook : "/"}>
                       <i className="fa fa-facebook"></i>
+                      <FontAwesomeIcon icon={['fab', 'facebook']} className="fa" />
                     </a>
                   </li>
                   <li>
                     <a href={props.data ? props.data.twitter : "/"}>
                       <i className="fa fa-twitter"></i>
+                      <FontAwesomeIcon icon={['fab', 'twitter']} className="fa" />
                     </a>
                   </li>
                   <li>
                     <a href={props.data ? props.data.youtube : "/"}>
-                      <i className="fa fa-youtube"></i>
+                      <FontAwesomeIcon icon={['fab', 'youtube']} className="fa" />
                     </a>
                   </li>
                 </ul>
