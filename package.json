@@ -3,7 +3,8 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "start": "webpack serve --env development"
+        "start": "webpack serve --env development",
+        "build": "rm -rf build && webpack --env production"
     },
     "dependencies": {
         "@testing-library/jest-dom": "^4.2.4",
