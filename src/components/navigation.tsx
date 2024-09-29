@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState} from "react";
 
 export const Navigation = (props) => {
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleNavbar = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav id="menu" className="navbar navbar-default navbar-fixed-top">
       <div className="container">
@@ -8,8 +15,8 @@ export const Navigation = (props) => {
           <button
             type="button"
             className="navbar-toggle collapsed"
-            data-toggle="collapse"
-            data-target="#bs-example-navbar-collapse-1"
+            onClick={toggleNavbar}
+            aria-expanded={isOpen}
           >
             {" "}
             <span className="sr-only">Toggle navigation</span>{" "}
@@ -22,10 +29,7 @@ export const Navigation = (props) => {
           </a>{" "}
         </div>
 
-        <div
-          className="collapse navbar-collapse"
-          id="bs-example-navbar-collapse-1"
-        >
+        <div className={`collapse navbar-collapse ${isOpen ? 'in' : ''}`} id="navbar-collapse">
           <ul className="nav navbar-nav navbar-right">
             <li>
               <a href="#features" className="page-scroll">

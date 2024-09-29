@@ -453,6 +453,10 @@ a:focus {
         margin: 1px -15px 0 -14px;
         padding: 0;
 
+        img {
+            width: 100%;
+        }
+
         .hover-bg {
             overflow: hidden;
             position: relative;
