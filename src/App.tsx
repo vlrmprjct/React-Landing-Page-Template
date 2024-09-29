@@ -9,7 +9,6 @@ import { Testimonials } from "./components/testimonials";
 import { Team } from "./components/Team";
 import { Contact } from "./components/contact";
 import Data from "./data/data.json";
-import "./App.css";
 
 const App = () => {
 
