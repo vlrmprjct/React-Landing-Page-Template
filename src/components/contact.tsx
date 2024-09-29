@@ -1,12 +1,12 @@
-import { useState } from "react";
-import emailjs from "emailjs-com";
-import React from "react";
+import React, { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 const initialState = {
   name: "",
   email: "",
   message: "",
 };
+
 export const Contact = (props) => {
   const [{ name, email, message }, setState] = useState(initialState);
 
@@ -16,25 +16,20 @@ export const Contact = (props) => {
   };
   const clearState = () => setState({ ...initialState });
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(name, email, message);
-
-    {/* replace below with your own Service ID, Template ID and Public Key from your EmailJS account */ }
-
     emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_PUBLIC_KEY")
+      .sendForm(process.env.EMAILJS_SERVICE_ID!, process.env.EMAILJS_TEMPLATE_ID!, e.target, process.env.EMAILJS_PUBLIC_KEY!)
       .then(
         (result) => {
-          console.log(result.text);
           clearState();
         },
-        (error) => {
-          console.log(error.text);
+        ({ text }) => {
+          console.error(text);
         }
       );
   };
+
   return (
     <div>
       <div id="contact">
