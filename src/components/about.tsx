@@ -5,7 +5,7 @@ export const About = (props) => {
         <section id="about" className="container">
             <div className="row">
                 <div className="col-xs-12 col-md-6">
-                    <img src="assets/img/about.jpg" className="img-fluid" alt="" />{" "}
+                    <img src="assets/img/about.jpg" className="img-fluid" alt="" />
                 </div>
                 <div className="col-xs-12 col-md-6">
                     <h2>About Us</h2>
