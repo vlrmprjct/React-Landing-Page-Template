@@ -1,74 +1,69 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 
 export const Navigation = (props) => {
 
-  const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
-  const toggleNavbar = () => {
-    setIsOpen(!isOpen);
-  };
+    const toggleNavbar = () => {
+        setIsOpen(!isOpen);
+    };
 
-  return (
-    <nav id="menu" className="navbar navbar-default navbar-fixed-top">
-      <div className="container">
-        <div className="navbar-header">
-          <button
-            type="button"
-            className="navbar-toggle collapsed"
-            onClick={toggleNavbar}
-            aria-expanded={isOpen}
-          >
-            {" "}
-            <span className="sr-only">Toggle navigation</span>{" "}
-            <span className="icon-bar"></span>{" "}
-            <span className="icon-bar"></span>{" "}
-            <span className="icon-bar"></span>{" "}
-          </button>
-          <a className="navbar-brand page-scroll" href="#page-top">
-            React Landing Page
-          </a>{" "}
-        </div>
+    return (
+        <nav id="menu" className="navbar navbar-expand-lg fixed-top bg-body-tertiary">
+            <div className="container">
 
-        <div className={`collapse navbar-collapse ${isOpen ? 'in' : ''}`} id="navbar-collapse">
-          <ul className="nav navbar-nav navbar-right">
-            <li>
-              <a href="#features" className="page-scroll">
-                Features
-              </a>
-            </li>
-            <li>
-              <a href="#about" className="page-scroll">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#services" className="page-scroll">
-                Services
-              </a>
-            </li>
-            <li>
-              <a href="#portfolio" className="page-scroll">
-                Gallery
-              </a>
-            </li>
-            <li>
-              <a href="#testimonials" className="page-scroll">
-                Testimonials
-              </a>
-            </li>
-            <li>
-              <a href="#team" className="page-scroll">
-                Team
-              </a>
-            </li>
-            <li>
-              <a href="#contact" className="page-scroll">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  );
+                <a className="navbar-brand" href="#">
+                    React Landing Page
+                </a>
+
+                <button
+                    className="navbar-toggler"
+                    type="button"
+                    onClick={toggleNavbar}
+                >
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+
+                <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`} id="navbar-collapse">
+                    <ul className="navbar-nav">
+                        <li className="nav-item">
+                            <a href="#features" className="nav-link">
+                                Features
+                            </a>
+                        </li>
+                        <li className="nav-item">
+                            <a href="#about" className="nav-link">
+                                About
+                            </a>
+                        </li>
+                        <li className="nav-item">
+                            <a href="#services" className="nav-link">
+                                Services
+                            </a>
+                        </li>
+                        <li className="nav-item">
+                            <a href="#gallery" className="nav-link">
+                                Gallery
+                            </a>
+                        </li>
+                        <li className="nav-item">
+                            <a href="#testimonials" className="nav-link">
+                                Testimonials
+                            </a>
+                        </li>
+                        <li className="nav-item">
+                            <a href="#team" className="nav-link">
+                                Team
+                            </a>
+                        </li>
+                        <li className="nav-item">
+                            <a href="#contact" className="nav-link">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    );
 };
