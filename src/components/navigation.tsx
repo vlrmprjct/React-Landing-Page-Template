@@ -42,8 +42,8 @@ export const Navigation = (props) => {
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a href="#gallery" className="nav-link">
-                                Gallery
+                            <a href="#portfolio" className="nav-link">
+                                Portfolio
                             </a>
                         </li>
                         <li className="nav-item">
