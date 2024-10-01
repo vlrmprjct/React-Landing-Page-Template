@@ -6,16 +6,13 @@
 
 html {
     scroll-behavior: smooth;
-}
-
-body,
-html {
     font-family: "Open Sans", sans-serif;
-    text-rendering: optimizeLegibility !important;
     color: #777;
     font-weight: 400;
-    width: 100% !important;
-    height: 100% !important;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 h2,
@@ -144,9 +141,6 @@ hr {
     }
 }
 
-
-
-
 .section-title {
     margin-bottom: 70px;
 }
@@ -219,62 +213,51 @@ a:focus,
 }
 
 /* Header Section */
-.intro {
-    display: table;
-    padding: 0;
-    background-color: #e5e5e5;
-    background-size: cover;
-    position: relative;
-    width: 99vw;
-    height: 100vh;
-    overflow: hidden;
-
+#header {
     img {
         width: 99vw;
         height: 100vh;
         object-fit: cover;
     }
-}
 
-.intro .overlay {
-    background: rgba(0, 0, 0, 0.2);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 99vw	;
-    height: 100vh;
-}
+    .overlay {
+        background: rgba(0, 0, 0, 0.2);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 99vw	;
+        height: 100vh;
+    }
 
-.intro h1 {
-    font-family: "Raleway", sans-serif;
-    color: #fff;
-    font-size: 82px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-top: 0;
-    margin-bottom: 10px;
-}
+    .intro-text {
+        padding-top: 350px;
+    }
 
-.intro h1 span {
-    font-weight: 800;
-    color: #5ca9fb;
-}
+    h1 {
+        font-family: "Raleway", sans-serif;
+        color: #fff;
+        font-size: 82px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 10px;
 
-.intro p {
-    color: #fff;
-    font-size: 22px;
-    font-weight: 300;
-    line-height: 30px;
-    margin: 0 auto;
-    margin-bottom: 60px;
-}
+        span {
+            font-weight: 800;
+            color: #5ca9fb;
+        }
+    }
 
-header .intro-text {
-    padding-top: 350px;
-    padding-bottom: 200px;
-    text-align: center;
+    p {
+        color: #fff;
+        font-size: 22px;
+        font-weight: 300;
+        line-height: 30px;
+        margin: 0 auto;
+        margin-bottom: 60px;
+    }
 }
 
 /* Features Section */
