@@ -456,25 +456,16 @@ a:focus,
 /* Team Section */
 #team {
     padding: 100px 0;
+
+    figcaption {
+        padding: 10px 0 0;
+        color: #888;
+    }
+
 }
 
-#team h4 {
-    margin: 5px 0;
-}
 
-#team .team-img {
-    width: 240px;
-}
 
-#team .thumbnail {
-    background: transparent;
-    border: 0;
-}
-
-#team .thumbnail .caption {
-    padding: 10px 0 0;
-    color: #888;
-}
 
 /* Contact Section */
 #contact {
