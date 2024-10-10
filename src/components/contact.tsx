@@ -32,7 +32,7 @@ export const Contact = (props) => {
 
     return (
         <>
-            <section id="contact">
+            <section id="contact" className="section-gradient">
                 <div className="container text-center">
                     <h2 className="section-title">Get In Touch</h2>
                     <p>
@@ -146,18 +146,6 @@ export const Contact = (props) => {
                     </div>
                 </div>
             </section>
-
-            <footer id="footer">
-                <div className="container text-center">
-                    <p>
-                        &copy; 2024 Issaaf Kattan React Land Page Template. Design by{" "}
-                        <a href="http://www.templatewire.com" rel="nofollow">
-                            TemplateWire
-                        </a>
-                    </p>
-                </div>
-            </footer>
-
         </>
     );
 };

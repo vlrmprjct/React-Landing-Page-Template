@@ -8,6 +8,8 @@ import { Gallery } from "./components/gallery";
 import { Testimonials } from "./components/testimonials";
 import { Team } from "./components/team";
 import { Contact } from "./components/contact";
+import { Footer } from "./components/footer";
+
 import Data from "./data/data.json";
 
 const App = () => {
@@ -23,6 +25,7 @@ const App = () => {
             <Testimonials data={Data.Testimonials} />
             <Team data={Data.Team} />
             <Contact data={Data.Contact} />
+            <Footer />
         </>
     );
 };
