@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-export const About = (props) => {
+export const About = ({ data }) => {
     return (
         <section id="about" className="container">
             <div className="row">
@@ -9,25 +9,20 @@ export const About = (props) => {
                 </div>
                 <div className="col-xs-12 col-md-6">
                     <h2 className="section-title">About Us</h2>
-                    <p>{props.data ? props.data.paragraph : "loading..."}</p>
                     <h3>Why Choose Us?</h3>
                     <div className="row">
                         <div className="col-lg-6 col-sm-12">
                             <ul>
-                                {props.data
-                                    ? props.data.Why.map((d, i) => (
-                                        <li key={`${d}-${i}`}>{d}</li>
-                                    ))
-                                    : "loading"}
+                                {data.Why.map((d, i) => (
+                                    <li key={`${d}-${i}`}>{d}</li>
+                                ))}
                             </ul>
                         </div>
                         <div className="col-lg-6 col-sm-12">
                             <ul>
-                                {props.data
-                                    ? props.data.Why2.map((d, i) => (
-                                        <li key={`${d}-${i}`}> {d}</li>
-                                    ))
-                                    : "loading"}
+                                {data.Why2.map((d, i) => (
+                                    <li key={`${d}-${i}`}>{d}</li>
+                                ))}
                             </ul>
                         </div>
                     </div>
