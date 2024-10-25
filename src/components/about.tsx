@@ -8,7 +8,7 @@ export const About = (props) => {
                     <img src="assets/img/about.jpg" className="img-fluid" alt="" />
                 </div>
                 <div className="col-xs-12 col-md-6">
-                    <h2>About Us</h2>
+                    <h2 className="section-title">About Us</h2>
                     <p>{props.data ? props.data.paragraph : "loading..."}</p>
                     <h3>Why Choose Us?</h3>
                     <div className="row">

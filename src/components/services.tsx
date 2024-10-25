@@ -2,7 +2,7 @@ import React from "react";
 
 export const Services = (props) => {
     return (
-        <section id="services">
+        <section id="services" className="section-gradient">
             <div className="container text-center">
                 <h2 className="section-title">Our Services</h2>
                 <p>
@@ -13,7 +13,7 @@ export const Services = (props) => {
                     {props.data
                         ? props.data.map((d, i) => (
                             <div key={`${d.name}-${i}`} className="col-md-4">
-                                <i className={d.icon}></i>
+                                <i className={`${d.icon} fa-2x`}></i>
                                 <div className="service-desc">
                                     <h3>{d.name}</h3>
                                     <p>{d.text}</p>

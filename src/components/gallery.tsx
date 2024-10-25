@@ -5,7 +5,7 @@ export const Gallery = (props) => {
     return (
         <section id="portfolio">
             <div className="container text-center">
-                <h2 className="section-title">Gallery</h2>
+                <h2 className="section-title">Portfolio</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
                     dapibus leonec.
