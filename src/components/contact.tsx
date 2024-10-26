@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 const initialState = {
-    name: "",
-    email: "",
-    message: "",
+    name: '',
+    email: '',
+    message: '',
 };
 
-export const Contact = (props) => {
+export const Contact = ({ data }) => {
     const [{ name, email, message }, setState] = useState(initialState);
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
+    const handleChange = ({ target }) => {
+        const { name, value } = target;
         setState((prevState) => ({ ...prevState, [name]: value }));
     };
     const clearState = () => setState({ ...initialState });
@@ -100,7 +100,7 @@ export const Contact = (props) => {
                                     <span>
                                         <i className="fa-solid fa-map-marker"></i> Address
                                     </span>
-                                    {props.data ? props.data.address : "loading"}
+                                    {data.address}
                                 </p>
                             </div>
                             <div className="contact-item">
@@ -108,7 +108,7 @@ export const Contact = (props) => {
                                     <span>
                                         <i className="fa-solid fa-phone"></i> Phone
                                     </span>{" "}
-                                    {props.data ? props.data.phone : "loading"}
+                                    {data.phone}
                                 </p>
                             </div>
                             <div className="contact-item">
@@ -116,7 +116,7 @@ export const Contact = (props) => {
                                     <span>
                                         <i className="fa-solid fa-envelope"></i> Email
                                     </span>{" "}
-                                    {props.data ? props.data.email : "loading"}
+                                    {data.email}
                                 </p>
                             </div>
                         </div>
@@ -125,17 +125,17 @@ export const Contact = (props) => {
                                 <div className="social">
                                     <ul>
                                         <li>
-                                            <a href={props.data ? props.data.facebook : "/"}>
+                                            <a href={data.facebook}>
                                                 <i className="fa-brands fa-facebook fa-xl"></i>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href={props.data ? props.data.twitter : "/"}>
+                                            <a href={data.twitter}>
                                                 <i className="fa-brands fa-twitter fa-xl"></i>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href={props.data ? props.data.youtube : "/"}>
+                                            <a href={data.youtube}>
                                                 <i className="fa-brands fa-youtube fa-xl"></i>
                                             </a>
                                         </li>
