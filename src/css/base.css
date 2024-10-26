@@ -142,8 +142,8 @@ section {
         display: table;
         width: 100%;
         padding: 0;
-        background-color: #e5e5e5;
         background-size: cover;
+        background-position: center;
     }
 
     img {
