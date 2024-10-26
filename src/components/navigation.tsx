@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-export const Navigation = (props) => {
+export const Navigation = () => {
 
     const [isOpen, setIsOpen] = useState(false);
 

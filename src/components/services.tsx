@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-export const Services = (props) => {
+export const Services = ({ data }) => {
     return (
         <section id="services" className="section-gradient">
             <div className="container text-center">
@@ -10,17 +10,15 @@ export const Services = (props) => {
                     dapibus leonec.
                 </p>
                 <div className="row">
-                    {props.data
-                        ? props.data.map((d, i) => (
-                            <div key={`${d.name}-${i}`} className="col-md-4">
-                                <i className={`${d.icon} fa-2x`}></i>
-                                <div className="service-desc">
-                                    <h3>{d.name}</h3>
-                                    <p>{d.text}</p>
-                                </div>
+                    {data.map(({ name, text, icon }, i) => (
+                        <div key={`${name}-${i}`} className="col-md-4">
+                            <i className={`${icon} fa-2x`}></i>
+                            <div className="service-desc">
+                                <h3>{name}</h3>
+                                <p>{text}</p>
                             </div>
-                        ))
-                        : "loading"}
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>
