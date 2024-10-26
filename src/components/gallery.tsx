@@ -1,7 +1,7 @@
-import React from "react";
-import { Image } from "./image";
+import React from 'react';
+import { Image } from './image';
 
-export const Gallery = (props) => {
+export const Gallery = ({ data }) => {
     return (
         <section id="portfolio">
             <div className="container text-center">
@@ -11,20 +11,18 @@ export const Gallery = (props) => {
                     dapibus leonec.
                 </p>
                 <div className="row g-1 portfolio-items">
-                    {props.data
-                        ? props.data.map((d, i) => (
-                            <div
-                                key={`${d.title}-${i}`}
-                                className="col-sm-6 col-md-4 col-lg-4"
-                            >
-                                <Image
-                                    title={d.title}
-                                    largeImage={d.largeImage}
-                                    smallImage={d.smallImage}
-                                />
-                            </div>
-                        ))
-                        : "Loading..."}
+                    {data.map(({ title, largeImage, smallImage }, i) => (
+                        <div
+                            key={`${title}-${i}`}
+                            className="col-sm-6 col-md-4 col-lg-4"
+                        >
+                            <Image
+                                title={title}
+                                largeImage={largeImage}
+                                smallImage={smallImage}
+                            />
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>
