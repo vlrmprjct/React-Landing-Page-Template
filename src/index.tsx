@@ -6,13 +6,13 @@ import '@/css/index.css';
 const root = document.getElementById('root');
 
 if (!root) {
-  throw new Error('Could not find root element!');
+    throw new Error('Could not find root element!');
 }
 
 const rootElement = createElement(() => {
-  return (
-    <App />
-  );
+    return (
+        <App />
+    );
 });
 
 createRoot(root).render(rootElement);
